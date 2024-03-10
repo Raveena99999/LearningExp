@@ -11,9 +11,7 @@ import { useNavigate } from "react-router-dom";
 export default function Afternavbar() {
   const navigate = useNavigate();
   const toast = useToast()
-function handleClick(){
-  alert("Thanku for contacting us")
-}
+
   return (
     <Box position="relative" overflowX="hidden">
       <Flex
@@ -46,20 +44,19 @@ function handleClick(){
           </Link>
 
           <Link
-            to="/servicesus"
-            // onClick={() => navigate("/serviceus")}
+            to="/serviceus"
 
             style={{
               textDecoration: "none",
-              transition: "transform 0.2s, font-weight 0.2s", // Add transition for smoother effect
+              transition: "transform 0.2s, font-weight 0.2s", 
             }}
             onMouseEnter={(e) => {
-              e.target.style.transform = "translateY(-2px)"; // Move the link 2 pixels up on hover
-              e.target.style.fontWeight = "bold"; // Increase font weight on hover
+              e.target.style.transform = "translateY(-2px)"; 
+              e.target.style.fontWeight = "bold"; 
             }}
             onMouseLeave={(e) => {
-              e.target.style.transform = "translateY(0)"; // Reset transformation on mouse leave
-              e.target.style.fontWeight = "normal"; // Reset font weight on mouse leave
+              e.target.style.transform = "translateY(0)";
+              e.target.style.fontWeight = "normal"; 
             }}
           >
             Services Us
