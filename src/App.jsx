@@ -7,6 +7,7 @@ import Certification from './components/Certification'
 import Studentfeedback from './components/Studentfeedback'
 import Footer from './components/Footer'
 import Dreamcareer from './components/Dreamcareer'
+import Afternavbar from './components/Afternavbar'
 // import './App.css'
 
 function App() {
@@ -14,11 +15,12 @@ function App() {
   return (
     <>
     {/* <Navbar/> */}
+    <Afternavbar/>
     {/* <Cards/> */}
     {/* <Certification/> */}
     {/* <Studentfeedback/> */}
     {/* <Footer/> */}
-    <Dreamcareer/>
+    {/* <Dreamcareer/> */}
     </>
   )
 }
