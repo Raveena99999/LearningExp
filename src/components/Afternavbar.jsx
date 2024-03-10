@@ -11,6 +11,10 @@ import { useNavigate } from "react-router-dom";
 export default function Afternavbar() {
   const navigate = useNavigate();
   const toast = useToast()
+  function handleClick(){
+    prompt("Enter your name to book demo class ")
+    alert("you can now attend the demo class")
+  }
 
   return (
     <Box position="relative" overflowX="hidden">
@@ -105,6 +109,7 @@ export default function Afternavbar() {
             h="2.2rem"
             w="7rem"
             // onClick={handleClick}
+            _hover={{bg:"black", color:"red",fontWeight:"bold"}}
             onClick={() =>
               toast({
                 title: 'Thanks for contacting',
@@ -157,7 +162,7 @@ export default function Afternavbar() {
           </Text>
 
           <Flex align="center" mt="2">
-            <Image w="8rem" src={anotherbutton} />
+            <Image w="8rem" src={anotherbutton} _hover={{bg:"blue" ,w:"12vw"}} onClick={handleClick}  />
             <Text fontSize="md" ml="0.5rem">
               Explore More
             </Text>

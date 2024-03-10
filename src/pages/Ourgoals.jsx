@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Image, Text, Button, Flex, useToast } from "@chakra-ui/react";
+import {  Image, Text, Button, Flex } from "@chakra-ui/react";
 import logoimage from "../assets/logoimage.svg"
 import { Link } from 'react-router-dom';
 export default function Ourgoals() {
