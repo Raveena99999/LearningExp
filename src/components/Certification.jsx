@@ -4,7 +4,7 @@ import tick from "../assets/tick.png";
 import circle from "../assets/circle.png";
 export default function Certification() {
   return (
-    <Box w="80%" m="auto"  bg="#F9F9FF" h="">
+    <Box w="90%" m="auto"  bg="#F9F9FF" mt="5rem">
       <Text fontSize="2rem" textAlign="center" color="#000000">
         We Completed 1200+ Certification Program
       </Text>
@@ -22,7 +22,7 @@ export default function Certification() {
         Embark on a journey of discovery,growth and success
       </Text>
 
-      <Flex justify="space-evenly" mt="1.5rem" flexWrap="wrap">
+      <Flex justify="space-evenly" mt="1.5rem" flexWrap="wrap" >
         <Box p="4" w={{ base: "45%", sm: "30%", md: "20%" }}>
           <Flex align="center">
             <Image h="6vh" src={tick} />

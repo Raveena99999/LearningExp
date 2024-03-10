@@ -6,8 +6,8 @@ import layout from "../assets/layout.png";
 
 export default function Cards() {
   return (
-    <Box w="80%" m="auto"  bg="#F9F9FF">
-      <Text fontSize="2rem" textAlign="center" color="#000000">
+    <Box w="100%" m="auto"  bg="#F9F9FF" mt="3rem" >
+      <Text fontSize="2rem" textAlign="center" color="#000000" >
         We provide various kind of
       </Text>
       <Text fontSize="2rem" textAlign="center" color="#000000" mt="-10px">
@@ -93,7 +93,7 @@ export default function Cards() {
         </Box>
       </Flex>
 
-      <Text fontSize="1.5rem" textAlign="center" color="#000000" mt="1rem">
+      <Text fontSize="2rem" textAlign="center" color="#000000" mt="2rem">
         Why Us
       </Text>
       <Text fontSize="0.8rem" textAlign="center" color="#707070" mt="0.5rem">

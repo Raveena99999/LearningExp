@@ -1,19 +1,19 @@
-
-
-
-
-
-
 import React from "react";
 import bluewomen from "../assets/bluewomen.jpg";
 import anotherbutton from "../assets/anotherbutton.svg";
 import arrowwhite from "../assets/arrowwhite.svg";
 import vediosmall from "../assets/vediosmall.mp4";
 import logoimage from "../assets/logoimage.svg";
-import { Box, Image, Text, Button, Flex } from "@chakra-ui/react";
+import { Box, Image, Text, Button, Flex, useToast } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function Afternavbar() {
+  const navigate = useNavigate();
+  const toast = useToast()
+function handleClick(){
+  alert("Thanku for contacting us")
+}
   return (
     <Box position="relative" overflowX="hidden">
       <Flex
@@ -30,17 +30,96 @@ export default function Afternavbar() {
         zIndex="1"
         width="80%"
       >
-        <Flex align="center" >
-          <Image h="2.5rem" src={logoimage} mr="4" ml="2rem" mt="1rem"/>
+        <Flex align="center">
+          <Image h="2.5rem" src={logoimage} mr="4" ml="2rem" mt="1rem" />
         </Flex>
 
-        <Flex align="center"  w="45vw" justify="space-around" mt="1rem">
-          <Link to="/" style={{ textDecoration: 'none', borderBottom: '2px solid #FFEC05' }}>Home</Link>
+        <Flex align="center" w="45vw" justify="space-around" mt="1rem">
+          <Link
+            to="/"
+            style={{
+              textDecoration: "none",
+              borderBottom: "2px solid #FFEC05",
+            }}
+          >
+            Home
+          </Link>
 
-          <Link to="/servicesus">Services Us</Link>
-          <Link to="/whysus">Why Us</Link>
-          <Link to="/ourgoals">Our Goals</Link>
-          <Button ml="4" borderRadius="2rem" fontSize="0.8rem" bg="#FFEC05" h="2.2rem" w="7rem">
+          <Link
+            to="/servicesus"
+            // onClick={() => navigate("/serviceus")}
+
+            style={{
+              textDecoration: "none",
+              transition: "transform 0.2s, font-weight 0.2s", // Add transition for smoother effect
+            }}
+            onMouseEnter={(e) => {
+              e.target.style.transform = "translateY(-2px)"; // Move the link 2 pixels up on hover
+              e.target.style.fontWeight = "bold"; // Increase font weight on hover
+            }}
+            onMouseLeave={(e) => {
+              e.target.style.transform = "translateY(0)"; // Reset transformation on mouse leave
+              e.target.style.fontWeight = "normal"; // Reset font weight on mouse leave
+            }}
+          >
+            Services Us
+          </Link>
+
+          <Link
+            to="/whyus"
+            style={{
+              textDecoration: "none",
+              transition: "transform 0.2s, font-weight 0.2s", 
+            }}
+            onMouseEnter={(e) => {
+              e.target.style.transform = "translateY(-2px)"; 
+              e.target.style.fontWeight = "bold"; 
+            }}
+            onMouseLeave={(e) => {
+              e.target.style.transform = "translateY(0)";
+              e.target.style.fontWeight = "normal"; 
+            }}
+          >
+            Why Us
+          </Link>
+
+          <Link
+            to="/ourgoals"
+            style={{
+              textDecoration: "none",
+              transition: "transform 0.2s, font-weight 0.2s", 
+            }}
+            onMouseEnter={(e) => {
+              e.target.style.transform = "translateY(-2px)"; 
+              e.target.style.fontWeight = "bold";
+            }}
+            onMouseLeave={(e) => {
+              e.target.style.transform = "translateY(0)"; 
+              e.target.style.fontWeight = "normal"; 
+            }}
+          >
+            Our goals
+          </Link>
+          <Button
+            ml="4"
+            borderRadius="2rem"
+            fontSize="0.8rem"
+            bg="#FFEC05"
+            h="2.2rem"
+            w="7rem"
+            // onClick={handleClick}
+            onClick={() =>
+              toast({
+                title: 'Thanks for contacting',
+                description: "Please fill email address first in input field",
+                status: 'error',
+                duration: 9000,
+                isClosable: true,
+                position: "top",
+              })
+            }
+
+          >
             Contact Us
           </Button>
         </Flex>
@@ -77,8 +156,8 @@ export default function Afternavbar() {
             Projects,and job ready certificate programs-{" "}
           </Text>
           <Text color="white" fontSize="md" mb="4">
-           All included in your subscription{" "}
-         </Text>
+            All included in your subscription{" "}
+          </Text>
 
           <Flex align="center" mt="2">
             <Image w="8rem" src={anotherbutton} />
@@ -107,7 +186,3 @@ export default function Afternavbar() {
     </Box>
   );
 }
-
-
-
-
